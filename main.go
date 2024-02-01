@@ -21,9 +21,9 @@ func eventshandler(analytics <-chan *slacker.CommandEvent) {
 }
 
 func main() {
-	os.Setenv("Slack_bot_token", "SlackBotToken")
+	os.Setenv("Slack_bot_token", "SLACKBOTTOKEN")
 
-	os.Setenv("Slack_App_Token", "AppToken")
+	os.Setenv("Slack_App_Token", "APPTOKEN")
 	bot := slacker.NewClient(os.Getenv("Slack_bot_token"), os.Getenv("Slack_App_Token"))
 
 	bot.Command("my yob is <year>", &slacker.CommandDefinition{
